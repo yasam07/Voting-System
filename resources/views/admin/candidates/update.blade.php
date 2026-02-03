@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- Page Header --}}
-<div class="flex justify-between">
+<div class="flex justify-between border-b mb-5">
     <div class="mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Candidate Management / Update</h2>
         <p class="text-sm text-gray-600">

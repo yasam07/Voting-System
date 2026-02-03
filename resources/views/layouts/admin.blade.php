@@ -48,7 +48,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
-
                 <!-- Dropdown menu -->
                 <div x-show="open" @click.away="open = false" 
                     class="mt-1 bg-gray-700 rounded shadow-lg">
@@ -71,6 +70,16 @@
                     
                 </div>
             </div>
+            
+            <a href="{{ route('admin.parties.index') }}"
+               class="block px-6 py-3 hover:bg-gray-800">
+                Party Management
+            </a>
+
+            <a href="{{ route('admin.posts.index') }}"
+               class="block px-6 py-3 hover:bg-gray-800">
+                Post Management
+            </a>
 
             <a href="#"
                class="block px-6 py-3 hover:bg-gray-800">

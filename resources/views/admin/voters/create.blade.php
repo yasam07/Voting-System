@@ -6,7 +6,7 @@
 <div class="max-w-7xl mx-auto">
 
     {{-- Page Header --}}
-    <div class="flex justify-between">
+    <div class="flex justify-between border-b mb-5">
         <div class="mb-6">
             <h2 class="text-2xl font-bold text-gray-800">Voter Management  /  create</h2>
             <p class="text-sm text-gray-600">

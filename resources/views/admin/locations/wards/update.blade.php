@@ -6,7 +6,7 @@
         <div class="mb-6">
             <h2 class="text-2xl font-bold text-gray-800">Location Management  / Ward  / Update</h2>
             <p class="text-sm text-gray-600">
-                Update New Ward
+                Update existing Ward
             </p>
         </div>
         <div class="">

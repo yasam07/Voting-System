@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- Page Header --}}
-    <div class="flex justify-between">
+    <div class="flex justify-between border-b">
         <div class="mb-6">
             <h2 class="text-2xl font-bold text-gray-800">Candidate Management</h2>
             <p class="text-sm text-gray-600">
@@ -19,7 +19,7 @@
     <!-- //location filters -->
     <form action="{{ route('admin.candidates.filter') }}" method="POST">
         @csrf
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 mb-4">
             <div class=" location-select">
                         
                 <x-partials.dropdown 
@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <div class="mb-4 flex justify-between">
+        <div class="mb-5 flex justify-between border-b">
             <div>
             <x-partials.button name="post_id" value="1" type="submit" variant="primary">President</x-partials.button>
             <x-partials.button name="post_id" value="2" type="submit" variant="primary">Vice-President</x-partials.button>

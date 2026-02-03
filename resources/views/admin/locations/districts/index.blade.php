@@ -7,7 +7,7 @@
         <div class="mb-6">
             <h2 class="text-2xl font-bold text-gray-800">Location Management  / Districts</h2>
             <p class="text-sm text-gray-600">
-                Locations information
+                Locations information of Districts
             </p>
         </div>
     </div>

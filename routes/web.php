@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\ProvinceController;
 use App\Http\Controllers\Admin\DistrictController;
 use App\Http\Controllers\Admin\MunicipalityController;
 use App\Http\Controllers\Admin\WardController;
+use App\Http\Controllers\Admin\PartyController;
+use App\Http\Controllers\Admin\PostController;
 
 
 
@@ -27,8 +29,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('/candidates/filter', [CandidateController::class, 'filter'])
         ->name('candidates.filter');
 
+    //Party-management
+    Route::resource('parties', PartyController::class)->except(['show']);
 
-    //Province-management
+    //Post-management
+    Route::resource('posts', PostController::class)->except(['show']);
 
     
 
