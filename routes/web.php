@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\CandidateController;
 use App\Http\Controllers\Admin\ProvinceController;
 use App\Http\Controllers\Admin\DistrictController;
 use App\Http\Controllers\Admin\MunicipalityController;
+use App\Http\Controllers\Admin\WardController;
 
 
 
@@ -53,6 +54,8 @@ Route::prefix('admin/locations')->name('admin.locations.')->group(function () {
     Route::resource('districts', DistrictController::class)->except(['show']);
 
     Route::resource('municipalities', MunicipalityController::class)->except(['show']);
+
+    Route::resource('wards', WardController::class)->except(['show']);
 
     
 });

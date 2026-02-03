@@ -9,7 +9,7 @@ class Ward extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['ward_no', 'municipality_id'];
+    protected $fillable = ['ward_no', 'municipality_id', 'status'];
 
     // A Ward belongs to a Municipality
     public function municipality()

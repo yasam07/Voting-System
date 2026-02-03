@@ -64,6 +64,10 @@
                     class="block px-6 py-3 hover:bg-gray-800">
                     Municipalities
                     </a>
+                    <a href="{{ route('admin.locations.wards.index') }}"
+                    class="block px-6 py-3 hover:bg-gray-800">
+                    Wards
+                    </a>
                     
                 </div>
             </div>
