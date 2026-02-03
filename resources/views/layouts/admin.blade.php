@@ -36,10 +36,37 @@
                 Candidate Management
             </a>
 
-            <a href="{{ route('admin.locations.index') }}"
-               class="block px-6 py-3 hover:bg-gray-800">
-                Location Management
-            </a>
+            
+
+            <div x-data="{ open: false }" class="relative">
+                <!-- Parent button -->
+                <button @click="open = !open"
+                        class="w-full text-left cursor-pointer px-6 py-3 hover:bg-gray-800 flex justify-between items-center">
+                    Location Management
+                    <!-- Optional arrow icon -->
+                    <svg :class="{ 'rotate-90': open }" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div x-show="open" @click.away="open = false" 
+                    class="mt-1 bg-gray-700 rounded shadow-lg">
+                    <a href="{{ route('admin.locations.provinces.index') }}"
+                    class="block px-6 py-3 hover:bg-gray-800">
+                    Provinces
+                    </a>
+                    <a href="{{ route('admin.locations.districts.index') }}"
+                    class="block px-6 py-3 hover:bg-gray-800">
+                    Districts
+                    </a>
+                    <a href="{{ route('admin.locations.municipalities.index') }}"
+                    class="block px-6 py-3 hover:bg-gray-800">
+                    Municipalities
+                    </a>
+                    
+                </div>
+            </div>
 
             <a href="#"
                class="block px-6 py-3 hover:bg-gray-800">

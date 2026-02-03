@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\VoterController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\CandidateController;
+use App\Http\Controllers\Admin\ProvinceController;
+use App\Http\Controllers\Admin\DistrictController;
+use App\Http\Controllers\Admin\MunicipalityController;
+
 
 
 // admin
@@ -22,17 +26,35 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('/candidates/filter', [CandidateController::class, 'filter'])
         ->name('candidates.filter');
 
-    Route::view('/locations/index','admin.locations.index')
-        ->name('locations.index');
 
-    Route::view('/locations/create','admin.locations.create')
-        ->name('locations.create');
+    //Province-management
+
+    
+
+    
+    
+    
+
+    
+
+   
 
     Route::get('/get-districts/{province}', [LocationController::class, 'districts']);
     Route::get('/get-municipalities/{district}', [LocationController::class, 'municipalities']);
     Route::get('/get-wards/{municipality}', [LocationController::class, 'wards']);
 
 
+});
+
+Route::prefix('admin/locations')->name('admin.locations.')->group(function () {
+
+    Route::resource('provinces', ProvinceController::class);
+
+    Route::resource('districts', DistrictController::class)->except(['show']);
+
+    Route::resource('municipalities', MunicipalityController::class)->except(['show']);
+
+    
 });
 
 
